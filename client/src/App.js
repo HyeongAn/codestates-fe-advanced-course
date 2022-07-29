@@ -3,6 +3,8 @@ import Header from './components/Header/Header'
 import Body from './components/Body/Body'
 import Footer from './components/Footer/Footer'
 import reset from 'styled-reset'
+import { createGlobalStyle } from 'styled-components';
+import './App.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -58,8 +60,6 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
-      <Body/>
-      <Footer/>
     </>
   );
 }
