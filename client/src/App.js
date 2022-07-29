@@ -60,6 +60,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
+      <Footer/>
     </>
   );
 }
