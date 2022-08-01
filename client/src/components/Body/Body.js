@@ -7,7 +7,6 @@ function Body (){
         <div>
             <Routes>
                 <Route path="/" element={<Main/>}/>
-                <Route path="/detail" element={<Detail/>}/>
             </Routes>
         </div>
     )

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const FooterSection = styled.footer`
     display : flex;
     align-items: center;
+    justify-content: center;
     width : 100%;
     height : 15.625rem;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.18);

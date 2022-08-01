@@ -10,8 +10,6 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
 
   body{
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height : 100%;
   }
@@ -60,6 +58,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
+      <Body/>
       <Footer/>
     </>
   );
