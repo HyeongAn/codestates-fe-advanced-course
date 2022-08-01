@@ -3,13 +3,13 @@ import Header from './components/Header/Header'
 import Body from './components/Body/Body'
 import Footer from './components/Footer/Footer'
 import reset from 'styled-reset'
+import { createGlobalStyle } from 'styled-components';
+import './App.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
   body{
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height : 100%;
   }
