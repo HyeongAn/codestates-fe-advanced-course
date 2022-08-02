@@ -51,7 +51,7 @@ function MainPage () {
                     <ContentTitle>
                         <span>No.</span>
                         <span>제목</span>
-                        <span>글쓴이</span>
+                        <span>작성자</span>
                     </ContentTitle>
                     <Posts info ={postsData(contentInfo)}/>
                     <Pagenation limit={limit} page={page} totalPosts={contentInfo.length} setPage={setPage}/>
