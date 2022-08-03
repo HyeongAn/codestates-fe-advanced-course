@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const MainSection = styled.section`
     width : 100%;
-    height: 81.25rem;
     display: flex;
     flex-direction: column;
     
@@ -17,13 +16,17 @@ export const SubjectWrap = styled.div`
 `
 
 export const Subject = styled.div`
-    font-size : 4.375rem;
+    font-size : 3rem;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+
+    @media (min-width : 760px){
+        font-size : 4.375rem;
+    }
 `
 
 export const BoardWrap = styled.div`
     width : 100%;
-    height : 59.375rem;
     display : flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +34,7 @@ export const BoardWrap = styled.div`
 
 export const Board = styled.div`
     width : 65.625rem;
-    height : 46.375rem;
+    min-width : 500px;
 `
 
 export const ContentTitle = styled.div`
@@ -40,14 +43,16 @@ export const ContentTitle = styled.div`
     display : flex;
     justify-content:space-between;
     align-items:center;
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
     & > span{
         color : #909090;
         text-align : center;
         width  : 5.625rem;
-        font-size :1.5625rem;
-        font-weight: 650;
+        font-size :1.125rem;
+        font-weight: 600;
         font-family: 'Open Sans', sans-serif;
+        @media (min-width : 760px){
+            font-size :1.5625rem;
+        }
     }
 `

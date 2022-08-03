@@ -14,6 +14,7 @@ function Detail (){
     const [contents, setContents] = useState();
     const [comments, setComments] = useState();
     
+
     async function handleGetContnets (){
         await axios({
             url : `${REACT_APP_API_URL}/posts/${location}`,
@@ -39,27 +40,29 @@ function Detail (){
     useEffect(() =>{
         handleGetContnets()
         handleGetComments()
-    }, [])
+    })
 
 
     return (
-        <DetialSection>
+        <>
             {
                 contents !== undefined && comments !== undefined
                     ? (
-                        <>
+                        <DetialSection>
                             <Contents contents = {contents}/>
                             <Comments comments = {comments}/>
-                        </>
+                        </DetialSection>
                     )
                     : (
-                        <ImageWrap>
-                            <img src={loadingImg} alt="loadingImg"/>
-                        </ImageWrap>
+                        <DetialSection loading="true">
+                            <ImageWrap>
+                                <img src={loadingImg} alt="loadingImg"/>
+                                <span>Loading...</span>
+                            </ImageWrap>
+                        </DetialSection>   
                     )
             }
-           
-        </DetialSection>
+        </>    
     )
 }
 

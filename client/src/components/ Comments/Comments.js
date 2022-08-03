@@ -3,9 +3,8 @@ import Profile from '../../assets/basicProfile.webp';
 import {
     CommentSection, CommentTitle,
     CommentWrap, Comment,
-    CommentPIC, CommentInfo,
-    CommentName, CommentBody,
-    CommentBodyWrap
+    CommentPIC, CommentName, 
+    CommentBody,CommentBodyWrap
     } from './styled'
 
 function Comments ({comments}){
@@ -22,18 +21,16 @@ function Comments ({comments}){
                             <Comment key={idx}>
                                 <CommentPIC>
                                     <img src={Profile} alt="profileImg"/>
-                                </CommentPIC>
-                                <CommentInfo>
                                     <CommentName>
                                         <p>{comment.name}</p>
                                         <span>{comment.email}</span>
                                     </CommentName>
-                                    <CommentBodyWrap>
-                                        <CommentBody>
-                                            {comment.body}
-                                        </CommentBody>
-                                    </CommentBodyWrap>
-                                </CommentInfo>
+                                </CommentPIC>
+                                <CommentBodyWrap>
+                                    <CommentBody>
+                                        {comment.body}
+                                    </CommentBody>
+                                </CommentBodyWrap>
                             </Comment>
                         )
                     })
