@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {REACT_APP_API_URL} from '../../config'
-
+import useLocalStorage from '../../Hooks/useLocalStorage'
 import axios from 'axios';
 import Pagenation from '../../components/Pagination/Pagination'
 import Posts from'../../components/Posts/Posts'
@@ -13,7 +13,7 @@ import {
 function MainPage () {
 
     const [contentInfo, setContentInfo] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useLocalStorage("page", 1);
     const limit = 10;
     const offset = (page-1)*limit;
     
@@ -31,6 +31,7 @@ function MainPage () {
     useEffect(() =>{
         handlePostInfo()
     },[])
+
 
     /* Pagenation을 위한 코드 추가 */
     const postsData = (posts) => {
@@ -51,7 +52,7 @@ function MainPage () {
                     <ContentTitle>
                         <span>No.</span>
                         <span>제목</span>
-                        <span>글쓴이</span>
+                        <span>작성자</span>
                     </ContentTitle>
                     <Posts info ={postsData(contentInfo)}/>
                     <Pagenation limit={limit} page={page} totalPosts={contentInfo.length} setPage={setPage}/>

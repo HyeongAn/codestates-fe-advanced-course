@@ -1,4 +1,5 @@
-import React, {useState} from "react"
+import React from "react"
+import useLocalStorage from "../../Hooks/useLocalStorage"
 import {
     PageSection, ButtonWrap,
     Button
@@ -6,10 +7,10 @@ import {
 
 function Pagination ({page, totalPosts, limit, setPage}){
     const numPages = Math.ceil(totalPosts/limit)
-    const [currPage, setCurrPage] = useState(page)
+    const [currPage, setCurrPage] = useLocalStorage("currPage", page)
     let firstNum = currPage - (currPage % 5) + 1
     let lastNum = currPage - (currPage % 5) + 5
-    //console.log({"currPage is":currPage, "firsNum is" : firstNum, "page is" : page})
+    console.log({"currPage is":currPage, "firsNum is" : firstNum, "page is" : page})
 
     return (
         <PageSection>
@@ -24,8 +25,8 @@ function Pagination ({page, totalPosts, limit, setPage}){
                     aria-current={page === firstNum ? "page" : null}>
                     {firstNum}
                 </Button>
-                {Array(4).fill().map((_, i) =>{
-                    if(i <=2){
+                {
+                    Array(3).fill().map((_, i) =>{
                         return (
                             <Button
                                 border="true" 
@@ -35,19 +36,16 @@ function Pagination ({page, totalPosts, limit, setPage}){
                                 {firstNum+1+i}
                             </Button>
                         )
+                    })}
+                    {
+                        <Button
+                            border="true" 
+                            key ={lastNum+1}
+                            onClick={() => setPage(lastNum)}
+                            aria-current={page === lastNum ? "page" : null}>
+                            {lastNum}
+                        </Button>
                     }
-                    else if(i>=3){
-                        return (
-                            <Button
-                                border="true" 
-                                key ={i+1}
-                                onClick={() => setPage(lastNum)}
-                                aria-current={page === lastNum ? "page" : null}>
-                                {lastNum}
-                            </Button>
-                        )  
-                    }
-                })}
                 <Button 
                     onClick={() => {setPage(page+1); setCurrPage(page);}} 
                     disabled={page===numPages}>

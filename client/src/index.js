@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import store from './store/store';
 import { BrowserRouter } from "react-router-dom";
+import Scrolltop from './ScrollTop'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Provider store={store}>
+    <Scrolltop/>
       <App />
-    </Provider>
   </BrowserRouter>
 );
 
