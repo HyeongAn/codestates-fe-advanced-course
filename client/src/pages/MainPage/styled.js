@@ -4,7 +4,9 @@ export const MainSection = styled.section`
     width : 100%;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
+    min-width : 500px;
 `
 
 export const SubjectWrap = styled.div`
@@ -26,14 +28,18 @@ export const Subject = styled.div`
 `
 
 export const BoardWrap = styled.div`
-    width : 100%;
+    width : 90%;
     display : flex;
     justify-content: center;
     align-items: center;
 `
 
 export const Board = styled.div`
-    width : 65.625rem;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width : 100%;
     min-width : 500px;
 `
 

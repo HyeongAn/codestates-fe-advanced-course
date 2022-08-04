@@ -3,6 +3,8 @@ import styled, { keyframes }from 'styled-components'
 export const ContentWrap = styled.section`
     width : 100%;
     display : flex;
+    justify-content :center;
+    align-items :center;
     flex-direction : column;
     min-width : 500px;
 `

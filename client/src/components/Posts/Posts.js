@@ -7,7 +7,6 @@ import {
     } from './styled'
 
 function Posts ({info}){
-
     const navigate = useNavigate();
 
     function handleGetId (e) {

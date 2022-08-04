@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {REACT_APP_API_URL} from '../../config'
 import useLocalStorage from '../../Hooks/useLocalStorage'
 import axios from 'axios';
@@ -18,6 +18,7 @@ function MainPage () {
     const offset = (page-1)*limit;
     
     async function handlePostInfo(){
+        
         const result = await axios({
             url : `${REACT_APP_API_URL}/posts`,
             method: 'GET',
@@ -28,19 +29,17 @@ function MainPage () {
         setContentInfo(result.data.reverse())
     }
 
-    useEffect(() =>{
-        handlePostInfo()
-    },[])
-
-
     /* Pagenation을 위한 코드 추가 */
     const postsData = (posts) => {
         if(posts){
-            let result = posts.slice(offset, offset + limit);
+            let result = posts.slice(offset, offset + limit);       
             return result;
         }
     }
-   
+    
+    useEffect(() =>{
+        handlePostInfo()
+    },[])   
 
     return (
         <MainSection>
