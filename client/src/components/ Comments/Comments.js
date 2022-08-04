@@ -13,6 +13,7 @@ function Comments ({comments}){
         <CommentSection>
             <CommentTitle>
                 <h2>Comments</h2>
+                <span>댓글 {comments.length}개</span>
             </CommentTitle>
             <CommentWrap>
                 {

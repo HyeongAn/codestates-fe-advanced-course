@@ -13,10 +13,18 @@ export const CommentTitle = styled.div`
     height : 5rem;
     display : flex;
     align-items : center;
+    justify-content :space-between;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
     & > h2{
         font-size : 1.875rem;
         font-weight:700;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    & > span{
+        font-size : 1rem;
+        color : rgba(0, 0, 0, 0.4);
+        padding-top : 2rem;
         font-family: 'Open Sans', sans-serif;
     }
     
