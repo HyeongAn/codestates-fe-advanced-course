@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import {REACT_APP_API_URL} from '../../config'
 import useLocalStorage from '../../Hooks/useLocalStorage'
 import axios from 'axios';
