@@ -6,7 +6,7 @@ function Header () {
 
     return (
         <HeaderSection>
-            <ImgWrapper to='/' onClick={() => {window.localStorage.clear(); window.location.reload();}}>
+            <ImgWrapper to='/' onClick={() => window.localStorage.clear()}>
                 <img src={image} alt="header img"/>
             </ImgWrapper>
         </HeaderSection>
