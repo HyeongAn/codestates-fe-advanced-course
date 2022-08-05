@@ -67,6 +67,7 @@ const floatingAnomation = keyframes`
 export const ImageWrap = styled.div`
     width : 100%;
     height : 100%;
+    padding : 3rem 0;
     display : flex;
     flex-direction : column;
     justify-content:center;
