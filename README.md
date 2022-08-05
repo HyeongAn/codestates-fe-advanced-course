@@ -45,7 +45,7 @@
 
 - 추가 구현 사항에 대한 구현 방법과 설명
   - [Page 최대 5개씩 보이게 하기](https://velog.io/@ahsy92/React-Pagination-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
-  - [LocalStorage를 이용하여 Page 고정하기 & 새로고침시 1 Page로 이동하기](https://velog.io/@ahsy92/React-LocalStorage-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+  - [LocalStorage를 이용하여 Page 고정하기 & header로고  1 Page로 이동하기](https://velog.io/@ahsy92/React-LocalStorage-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
   - [반응형 웹 만들기 미디어 쿼리](https://velog.io/@ahsy92/Self-Study-%EB%AF%B8%EB%94%94%EC%96%B4-%EC%BF%BC%EB%A6%AC)
   - [반응형 웹 만들기 CSS](https://velog.io/@ahsy92/Final-Project)
 
